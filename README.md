@@ -1,12 +1,16 @@
 ## CV Generator
 
+### Take a look
+
+https://cv-generator-ebon.vercel.app/
+
 ![image](https://github.com/Cerbenix/CV_Generators/assets/124684938/caa8afe2-77c2-41e5-b05e-60134ddb7429)
 
-## Project setup
+### Project setup
 
 ``npm install``
 
-## Description
+### Description
 
 CV generator with Next.js 13.4.10 using Typescript, TailwindCSS, and MUI.
 
