@@ -70,13 +70,13 @@ const CvPage = forwardRef<HTMLDivElement, CVSectionProps>(
           )}
           {workExperiences.map((experience, index) => (
             <div key={index} className="mt-1 flex flex-col">
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between items-center">
                 <p className="font-bold">{experience.company}</p>
-                <p className="text-sm">{experience.date}</p>
+                <p className="text-xs">{experience.date}</p>
               </div>
-              <p className="text-sm">{experience.jobTitle}</p>
+              <p className="text-sm mb-1">{experience.jobTitle}</p>
               {experience.description.split("\n").map((line, index) => (
-                <p key={index} className="font-light text-sm">
+                <p key={index} className="font-light text-sm ml-2">
                   {line}
                 </p>
               ))}
@@ -96,9 +96,9 @@ const CvPage = forwardRef<HTMLDivElement, CVSectionProps>(
           )}
           {educations.map((education, index) => (
             <div key={index} className="mt-1 flex flex-col">
-              <div className="flex flex-row justify-between align-middle">
+              <div className="flex flex-row justify-between items-center">
                 <p className="font-bold">{education.school}</p>
-                <p className="text-sm">{education.date}</p>
+                <p className="text-xs">{education.date}</p>
               </div>
               <p className="text-sm">{education.degree}</p>
             </div>

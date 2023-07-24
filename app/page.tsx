@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
 import { Button } from "@mui/material";
-import html2pdf from "html2pdf.js";
 import ContactDetails from "./components/ContactDetails";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
@@ -46,8 +45,10 @@ const CVGenerator = () => {
     },
   ]);
 
-  const handleDownloadPDF = () => {
+  const handleDownloadPDF = async () => {
     if (cvSectionRef.current) {
+      const html2pdf = (await import("html2pdf.js")).default;
+
       const opt = {
         filename: "my_cv.pdf",
         image: { type: "jpeg", quality: 0.98 },
